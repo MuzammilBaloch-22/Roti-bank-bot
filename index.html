@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Roti Bank - Saylani</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .engbutton {
+      background-color: white;
+      border-radius: 30px;
+      height: 34px;
+      width: 80px;
+      font-weight: 400;
+    }
+
+    .image-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #0a7e45;
+      --df-messenger-button-titlebar-color: #006f4c;
+      --df-messenger-chat-background-color: #f1fdf6;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #0a7e45;
+      --df-messenger-user-message: #2c2c2c;
+    }
+
+    /* Ensure chatbot stays at bottom right */
+    df-messenger {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 9999;
+    }
+
+    /* Footer style tweaks for mobile */
+    @media (max-width: 768px) {
+      .icnslogo {
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      .lasttext, .lasttexte {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-100 text-gray-600 text-xs sm:text-sm flex flex-wrap justify-center sm:justify-start py-1 px-4">
+    <div class="flex flex-wrap gap-3 sm:gap-6 w-full items-center justify-center sm:justify-start font-bold">
+      <div class="flex items-center gap-1">
+        <i class="far fa-envelope"></i>
+        <a class="hover:underline" href="mailto:info@SaylaniWelfareUSA.com">info@SaylaniWelfareUSA.com</a>
+      </div>
+      <div class="flex items-center gap-1">
+        <i class="fas fa-phone-alt"></i>
+        <span>833-786-0999</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <i class="fas fa-phone"></i>
+        <span>+923331201585</span>
+      </div>
+      <button class="engbutton ml-auto">English</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="border-b border-gray-200 bg-white">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between h-16">
+      <a href="#">
+        <img src="https://mail.saylaniwelfare.com/static/media/logo_saylaniwelfare.22bf709605809177256c.png"
+             alt="Saylani logo" class="h-10 w-auto" />
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm text-gray-600">
+        <li><a class="hover:text-gray-900" href="#">Home</a></li>
+        <li><a class="hover:text-gray-900" href="#">About</a></li>
+        <li><a class="text-blue-600 font-medium" href="#">Services</a></li>
+        <li><a class="hover:text-gray-900" href="#">Media</a></li>
+        <li><a class="hover:text-gray-900" href="#">Contact Us</a></li>
+        <li><a class="hover:text-gray-900" href="#">Bank Details</a></li>
+      </ul>
+      <div class="hidden md:flex space-x-3">
+        <a class="bg-blue-600 text-white text-xs font-semibold px-3 py-2 rounded hover:bg-blue-700" href="#">BE A SPONSOR</a>
+        <a class="bg-blue-600 text-white text-xs font-semibold px-3 py-2 rounded hover:bg-blue-700" href="#">DONATE NOW</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="px-4 py-12 max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="flex-1">
+        <p class="text-gray-600 text-sm">Services - Food - Roti Bank</p>
+        <h1 class="text-3xl font-bold mt-4">Roti Bank</h1>
+        <p class="text-base mt-6 leading-relaxed">
+          Saylani Welfare’s Food Bank in Pakistan offers essential food supplies to
+          struggling families. Help us fight hunger and ensure no one sleeps hungry.
+        </p>
+      </div>
+      <div class="flex-1">
+        <img src="https://saylaniwelfareusa.com/images/cloudinaryImages/services-food-roti-image.webp" alt="Roti Bank Image" class="rounded-lg shadow" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Guide Section -->
+  <section class="w-full bg-[#84C857]/90 py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center text-white">
+      <h1 class="text-3xl font-semibold mb-6">Saylani Guide</h1>
+      <input type="email" placeholder="Enter E-Mail Address"
+             class="w-full rounded px-4 py-3 text-black focus:outline-none" />
+      <button class="mt-4 w-full bg-white text-black font-bold py-3 rounded hover:bg-gray-200">SUBSCRIBE</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#3f3f3f] text-white text-sm relative">
+    <img src="https://storage.googleapis.com/a1aa/image/2705f00b-c21a-4e54-6f20-fb14d163dd5c.jpg"
+         alt="Background waves"
+         class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none select-none" />
+
+    <div class="relative max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
+      <!-- Logo and Social -->
+      <div class="flex flex-col items-center md:items-start">
+        <img src="https://mail.saylaniwelfare.com/static/media/logo_saylaniwelfare.22bf709605809177256c.png"
+             alt="Saylani logo"
+             class="w-[200px] h-[60px] object-contain" />
+        <div class="flex gap-3 mt-4 icnslogo">
+          <a class="w-10 h-10 bg-[#3b5998] rounded-full flex items-center justify-center" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="w-10 h-10 bg-black rounded-full flex items-center justify-center" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="w-10 h-10 bg-[#3b5998] rounded-full flex items-center justify-center" href="#"><i class="fab fa-telegram-plane"></i></a>
+          <a class="w-10 h-10 bg-[#ff0000] rounded-full flex items-center justify-center" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="w-10 h-10 bg-[#25d366] rounded-full flex items-center justify-center" href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-white">
+        <div>
+          <h3 class="font-bold text-lg mb-3">About</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">Introduction</a></li>
+            <li><a href="#" class="hover:underline">Chairman Message</a></li>
+            <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-3">Explore</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">News</a></li>
+            <li><a href="#" class="hover:underline">Media</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Donation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-3">Contact</h3>
+          <p>1 E Erie St STE 525-2783 Chicago, IL 60611</p>
+          <p>UAN Pak: +92 021-111729526</p>
+          <p>Email: info@SaylaniWelfareUSA.com</p>
+          <p><a class="text-blue-400 hover:underline" href="#">Call: 833-786-0999</a></p>
+          <p>Tax ID: 88-3709826</p>
+          <p>Muhammad Tahir</p>
+          <p class="font-semibold">For Istikhara Contact <i class="fab fa-whatsapp"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-white opacity-30 my-4" />
+    <div class="text-center pb-4">Copyright © 2025 by Saylani Welfare Int Trust</div>
+  </footer>
+
+  <!-- Chatbot -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    chat-icon="images/botlogo.png"
+    chat-title="Roti.Bank"
+    agent-id="85972d70-c991-453d-9fd3-e20d6e36c9aa"
+    language-code="en">
+  </df-messenger>
+
+</body>
+</html>
+
+  
