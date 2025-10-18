@@ -120,14 +120,59 @@
   </main>
 
   <!-- Guide Section -->
-  <section class="w-full bg-[#84C857]/90 py-16 px-4">
-    <div class="max-w-3xl mx-auto text-center text-white">
-      <h1 class="text-3xl font-semibold mb-6">Saylani Guide</h1>
-      <input type="email" placeholder="Enter E-Mail Address"
-             class="w-full rounded px-4 py-3 text-black focus:outline-none" />
-      <button class="mt-4 w-full bg-white text-black font-bold py-3 rounded hover:bg-gray-200">SUBSCRIBE</button>
-    </div>
-  </section>
+<section class="w-full bg-[#84C857]/90 py-16 px-4">
+  <div class="max-w-3xl mx-auto text-center text-white">
+    <h1 class="text-3xl font-semibold mb-6">Saylani Guide</h1>
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Enter E-Mail Address"
+      class="w-full rounded px-4 py-3 text-black focus:outline-none"
+      required
+    />
+    <button
+      id="subscribeBtn"
+      class="mt-4 w-full bg-white text-black font-bold py-3 rounded hover:bg-gray-200"
+    >
+      SUBSCRIBE
+    </button>
+
+    <!-- Message area -->
+    <p id="message" class="mt-4 text-lg font-medium"></p>
+  </div>
+</section>
+
+<script>
+  const subscribeBtn = document.getElementById("subscribeBtn");
+  const emailInput = document.getElementById("emailInput");
+  const message = document.getElementById("message");
+
+  subscribeBtn.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+
+    if (email === "") {
+      message.textContent = "Please enter your email address.";
+      message.style.color = "yellow";
+      return;
+    }
+
+    // Simple email validation
+    const validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!validEmail.test(email)) {
+      message.textContent = "Please enter a valid email address.";
+      message.style.color = "orange";
+      return;
+    }
+
+    // Success message
+    message.textContent = "🎉 Subscribed successfully!";
+    message.style.color = "white";
+
+    // Clear input
+    emailInput.value = "";
+  });
+</script>
+
 
   <!-- Footer -->
   <footer class="bg-[#3f3f3f] text-white text-sm relative">
@@ -188,14 +233,14 @@
   </footer>
 
   <!-- Chatbot -->
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    chat-icon="images/botlogo.png"
-    chat-title="Roti.Bank"
-    agent-id="85972d70-c991-453d-9fd3-e20d6e36c9aa"
-    language-code="en">
-  </df-messenger>
-
+ <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https:&#x2F;&#x2F;saylani-welfare-uk.netlify.app&#x2F;images.png"
+  intent="WELCOME"
+  chat-title="Roti.Bank"
+  agent-id="85972d70-c991-453d-9fd3-e20d6e36c9aa"
+  language-code="en"
+></df-messenger>
 </body>
 </html>
 
